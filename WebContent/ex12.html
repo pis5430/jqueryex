@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>배열</h1>
+	
+	<script type="text/javascript">
+	/*
+	var array01 = [273, 32, 103, 57, 52];
+
+	
+	console.log(array01[0]);
+	console.log(array01[1]);
+	console.log(array01[2]);
+	console.log(array01[3]);
+	console.log(array01[4]);
+	console.log("----------");
+	
+	
+	array01.push(100); //배열 추가
+	for(var i=0; i<array01.length; i++){
+		console.log(array01[i]);
+		
+	}
+	
+	console.log("----------");
+	
+	array01.pop(); //마지막 배열 제거 
+	for(var i=0; i<array01.length; i++){
+		console.log(array01[i]);
+		
+	}
+	
+	console.log("----------");
+	
+	var array02 = [];
+	array02[0] = 1;
+	array02[1] = 2.5;
+	array02[2] = "안녕";
+	array02[4] = "hello!!"; //같은 타입이 아니어도 같은 배열안에 넣을수 있음
+
+	for(var i=0; i<array02.length; i++){
+		console.log(array02[i]);
+		
+	}	
+	*/
+	
+	//어디에 써도 상관없음
+	function sum(a,b){
+		return a+b
+	}
+	
+	
+	//반드시 먼저 정의 되어야 함
+	var sum2 = function(){
+		return 3+4;
+	}
+	
+	var array03 = [273, 1.5, "안녕" , 3>2 , sum, sum2 , function(){return "익명함수"},[100,200,300]]
+	
+	console.log(array03[0]);
+	console.log(array03[1]);
+	console.log(array03[2]);
+	console.log(array03[3]);
+	console.log(array03[4](100,100));
+	console.log(array03[5]()); //()까지 넣어줘야 결과값이 나옴
+	console.log(array03[6]()); //()까지 넣어줘야 결과값이 나옴
+	
+	console.log(array03[7][0]); // array03[7]에 배열을 넣어줫을때 [0]방번호를 지정해줘야 값 불러올수 있음
+	console.log(array03[7][1]);
+	
+	
+	
+	
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h1>변수의 범위</h1>
+	
+	<script type="text/javascript">
+	/*
+		var name = "global";    // 전역 변수를 선언
+	
+		
+		//함수 정의, 바로 실행되지 않는다. 정의부분이 해석만된다.
+		function checkscope(){  
+	    		var name = "local"; // 지역 변수를 선언
+	    		console.log(name);  // 전역 변수가 아닌 지역 변수를 사용
+		}
+		
+		checkscope();                  // 출력 결과: "local"
+	      console.log(name);          // 출력 결과: "global"
+	*/
+	
+	var name = "global";    // 전역 변수를 선언
+	
+	
+	//함수 정의, 바로 실행되지 않는다. 정의부분이 해석만된다.
+	function checkscope(){  
+    		name = "local"; // 지역 변수를 선언
+    		name2 = "로컬"; 		
+	}
+	
+	checkscope();                  // 출력 결과: "local"
+      console.log(name);          // 출력 결과: "global"
+      console.log(name);
+	
+	
+	
+	
+	
+	
+	</script>
+	
+
+
+
+
+</body>
+</html>

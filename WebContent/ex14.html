@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>이벤트</h1>
+	
+	<h2>h2태그_1</h2>
+	<h2>h2태그_2</h2>
+	<h2>h2태그_3</h2>
+	
+	<h3 class="tagh3">네이버</h3>
+	<h3 class="tagh3">다음</h3>
+	
+	
+	<!-- ex(마우스 클릭할때 , 키보드를 입력할때 ) - ~을 할때 -->
+	
+	<div>
+		<button id="btn">자바스크립트 테스트 버튼</button>
+	</div>
+	
+	<!-- 클릭 햇을시 생기는 영역으로 지정 -->
+	<p id="display">
+		
+	</p>
+	
+	<p id="display2">
+		
+	</p>
+	<script type="text/javascript">
+		//window.onload 내장되어있는 이름 --> 
+		//문서가 로딩 되었을때
+		window.onload =  function(){
+			//로딩 되었을때 작동하는 기능
+			var testButton = document.getElementById("btn"); //btn기능을 찾아 var 선언 변수 안에 넣음			
+			console.log(testButton); //변수명안에 들어 있는 값 보여주기
+			
+			//태그는 하나여도 배열에 저장함
+			//id가 아닌 태그로 지정하는법 (h1)
+			var tag = document.getElementsByTagName("h1"); //기능을 찾아 var 선언 변수 안에 넣음			
+			console.log(tag); //변수명안에 들어 있는 값 보여주기
+			
+			//id가 아닌 태그로 지정하는법 (h2)
+			var tagArray = document.getElementsByTagName("h2"); //기능을 찾아 var 선언 변수 안에 넣음			
+			console.log(tagArray); //변수명안에 들어 있는 값 보여주기
+			
+			
+			//id가 아닌 class로 지정하는법 (h3)
+			var tagh3Array = document.getElementsByClassName("tagh3"); //기능을 찾아 var 선언 변수 안에 넣음			
+			var textArea2 = document.getElementById("display2");
+			console.log(tagh3Array); //변수명안에 들어 있는 값 보여주기
+			console.log(textArea2);
+			
+			
+			var textArea = document.getElementById("display");
+			console.log(textArea);
+			
+			//기능은 정의되고 클릭이 되면 작동한다
+			testButton.onclick = function(){ //버튼 클릭시 콘솔창에 버튼클립 문자가 나오도록
+				console.log("버튼클릭");
+			 	textArea.innerHTML="<font color='#ff0000'>홍길동</font>"	
+			};
+			
+			//태그가  하나인경우			
+			tag[0].onclick = function(){ //버튼 클릭시 콘솔창에 버튼클립 문자가 나오도록
+				console.log("h1클릭");
+				textArea.innerHTML="<font color='#00ff00'>홍길동</font>"
+			};
+			
+			//태그가 여러개인경우			
+			tagArray[0].onclick = function(){ //버튼 클릭시 콘솔창에 버튼클립 문자가 나오도록
+				console.log("h2클릭_1");
+				textArea.innerHTML="<font color='#0000ff'>홍길동</font>"
+			};
+			
+			//클래스			
+			tagh3Array[0].onclick = function(){ //버튼 클릭시 콘솔창에 버튼클립 문자가 나오도록
+				console.log("네이버");
+				textArea2.innerHTML="<a href='http://naver.com'>네이버</a>"
+			};
+			
+			tagh3Array[1].onclick = function(){ //버튼 클릭시 콘솔창에 버튼클립 문자가 나오도록
+				console.log("다음");
+				textArea2.innerHTML="<a href='http://daum.net'>다음</a>"
+			};
+			
+			
+			
+			
+			
+		};
+	
+
+	</script>
+
+</body>
+</html>
